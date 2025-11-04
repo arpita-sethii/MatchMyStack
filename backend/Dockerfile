@@ -33,13 +33,13 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
-# Copy backend code
-COPY ./app
+# Copy backend code (current context is the backend folder)
+COPY . /app
 
 # Create uploads folder
 RUN mkdir -p /data/uploads && chown -R www-data:www-data /data/uploads || true
 
 EXPOSE 8000
 
-# Start FastAPI server
+# Start FastAPI server (Render will set $PORT at runtime)
 CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
