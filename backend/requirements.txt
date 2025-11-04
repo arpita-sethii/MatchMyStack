@@ -1,7 +1,8 @@
 # =============================
 # 🚀 MatchMyStack Backend Requirements
+# Production-ready for Render
 # =============================
-pip>=25.1
+
 # --- Core Framework ---
 fastapi==0.119.1
 uvicorn[standard]==0.38.0
@@ -13,6 +14,7 @@ watchfiles==1.1.1
 # --- Database & ORM ---
 sqlalchemy==2.0.44
 aiosqlite==0.21.0
+psycopg2-binary==2.9.9
 greenlet==3.2.4
 
 # --- Authentication & Security ---
@@ -30,20 +32,26 @@ typing-inspection==0.4.2
 spacy==3.8.2
 pdfplumber==0.11.4
 PyPDF2==3.0.1
-numpy>=1.23,<2.0
+numpy==1.26.4
 scikit-learn==1.5.2
 sentence-transformers==3.3.1
 
 # --- File Uploads ---
 python-multipart==0.0.9
 
-# --- Testing Tools ---
-pytest==8.3.3
-pytest-asyncio==0.25.0
-httpx==0.27.2
+# --- WebSocket & Real-time ---
+python-socketio==5.11.1
+websockets==13.1
 
-# --- Optional utilities ---
-colorama==0.4.6
-aiofiles
-requests
-gunicorn
+# --- Email ---
+aiosmtplib==3.0.2
+
+# --- Utilities ---
+aiofiles==24.1.0
+requests==2.32.3
+gunicorn==23.0.0
+
+# --- Testing Tools (commented for production) ---
+# pytest==8.3.3
+# pytest-asyncio==0.25.0
+# httpx==0.27.2
