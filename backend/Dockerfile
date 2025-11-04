@@ -30,11 +30,11 @@ WORKDIR /app
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 
 # Copy requirements and install
-COPY backend/requirements.txt /app/requirements.txt
+COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # Copy backend code
-COPY backend /app
+COPY ./app
 
 # Create uploads folder
 RUN mkdir -p /data/uploads && chown -R www-data:www-data /data/uploads || true
