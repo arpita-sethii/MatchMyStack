@@ -16,13 +16,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libffi-dev \
     python3-dev \
     pkg-config \
-    libatlas-base-dev \
-    liblapack-dev \
-    libblas-dev \
-    gfortran \
     curl \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
+
 
 WORKDIR /app
 
