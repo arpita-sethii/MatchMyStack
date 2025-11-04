@@ -1,0 +1,45 @@
+# ===============================
+# 🚫 Files to ignore for MatchMyStack
+# ===============================
+
+# --- Python virtual environments ---
+.venv/
+backend/.venv/
+backend/deployenv/
+backend/myenv/
+
+# --- Python cache ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Environment variables ---
+.env
+backend/.env
+backend/.env.*
+
+# --- SQLite / local DB files ---
+backend/app.db
+backend/backups/
+*.sqlite3
+
+# --- Uploads / temp files ---
+backend/tmp/
+backend/uploads/
+
+# --- Node modules (frontend) ---
+frontend/node_modules/
+matchmystack-fd/node_modules/
+
+# --- Build output ---
+dist/
+build/
+
+# --- IDE / editor settings ---
+.vscode/
+.idea/
+
+# --- OS junk files ---
+.DS_Store
+Thumbs.db
